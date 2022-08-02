@@ -1,0 +1,92 @@
+:root {
+  --accent-dark: #97CC04;
+  --bg-dark: #E84855;
+  --accent-light: #E84855;
+  --bg-light: #FFF3F0;
+  --text-dark: #FFF3F0;
+  --day-size: 30px;
+}
+
+.main{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.controls{
+  margin-left:10px;
+}
+
+.days-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 10px;
+  padding: 0px 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 380px;
+  height: 100%;
+}
+
+.header{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.btn-theme{
+  border:none;
+  background: transparent;
+  color:var(--accent-light);
+  cursor: pointer;
+}
+
+.btn-theme.pink{
+  color:var(--text-dark);
+}
+
+.day{
+  background: white;
+  border-radius: 50%;
+  width: 14%;
+  height: 14vm;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  margin:2px;
+}
+
+.day.checked{
+  background-color: var(--accent-light);
+}
+
+.day.checked.pink{
+  background-color: var(--accent-dark)
+}
+
+.day.pink{
+  background-color:transparent;
+}
+
+.month-title{
+  width : 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.month-title.selected{
+  text-decoration:underline;
+}
