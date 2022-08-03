@@ -13,6 +13,11 @@ const Footer = observer(() => {
     useEffect(() => {
         localStorage.setItem('isPink',isPink)
     },[isPink])
+  
+    const clear = () => {
+      TrackerStore.clearStatistics()
+      window.location.reload()
+    }
 
     return (
         <div className='footer'>
@@ -21,6 +26,9 @@ const Footer = observer(() => {
                 Change to {isPink ? 'light' : 'pink'} theme
             </button>
           <h2>Statistics: drunk {TrackerStore.statistics}% days in this month</h2>
+        <button className={cn('btn-theme',{pink:isPink === true})} onClick={clear}>
+          clear statistics
+        </button>
         </div>
     )
 })
